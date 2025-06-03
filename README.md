@@ -16,7 +16,7 @@ Realtime data visualized via Node-RED dashboard over MQTT.
 
 環境準備
 1. 開啟 Arduino IDE, 設定 WiFi & MQTT
-參考 Arduino/ 資料夾內的 .ino 檔案，設定WiFi & MQTT Broker並燒錄至 ESP32。
+參考 ESP32/ 資料夾內的 .ino 檔案，設定WiFi & MQTT Broker並燒錄至 ESP32。
 
 2. 接線參考
 請依據 images/ 資料夾內的接線圖進行連接，特別注意以下幾點：
