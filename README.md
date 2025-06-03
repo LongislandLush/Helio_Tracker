@@ -48,7 +48,7 @@ Realtime data visualized via Node-RED dashboard over MQTT.
    
    ![Wiring Diagram](Images/Node-Red_Chrome.png)
    
-   ![Wiring Diagram](Images/Node-Red_UI.png)
+   ![Wiring Diagram](Images/Node-Red_Dashbpard.png)
 
 # 功能說明
 
@@ -117,7 +117,7 @@ Realtime data visualized via Node-RED dashboard over MQTT.
 
 Dashboard
 
-![Wiring Diagram](Images/Node-Red_Dashbpard.png)
+![Wiring Diagram](Images/Node-Red_UI.png)
 
 實體接線圖
 
