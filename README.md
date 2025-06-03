@@ -20,9 +20,10 @@ Realtime data visualized via Node-RED dashboard over MQTT.
 
 2. 接線參考
 請依據 images/ 資料夾內的接線圖進行連接，特別注意以下幾點：
+
 ![Wiring Diagram](Images/Helio_Tracker_接線圖.png)
 
-3. Node-Red 元件參數設定
+4. Node-Red 元件參數設定
 
 注意事項
 
@@ -40,10 +41,13 @@ Realtime data visualized via Node-RED dashboard over MQTT.
 3. 確認有連接到MQTT Broker, 訂閱Topic程式碼內建是helioTracker/data (可以在程式碼改成自己喜歡的)
 
 4. 打開CMD, 輸入 node-red就會在本機開啟(詳細的Node-Red 安裝請自行Google)
+   
    ![Wiring Diagram](Images/Node-Red_開啟.png)
 
 5. 打開瀏覽器輸入127.0.0.1:1880 & 127.0.0.1:1880/ui, 即可開啟Node-Red & Dashboard(詳細的Node-Red操作請自行Google)
+   
    ![Wiring Diagram](Images/Node-Red_Chrome.png)
+   
    ![Wiring Diagram](Images/Node-Red_UI.png)
 
 # 功能說明
@@ -112,6 +116,7 @@ Realtime data visualized via Node-RED dashboard over MQTT.
 點擊下方觀看實際操作影片，展示伺服馬達追隨光源方向轉定並同步在Node-Red是視覺化Dashboard：
 
 Dashboard
+
 ![Wiring Diagram](Images/Node-Red_Dashbpard.png)
 
 實體接線圖
