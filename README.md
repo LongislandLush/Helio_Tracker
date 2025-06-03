@@ -9,7 +9,7 @@ A light tracking system using ESP32 + photoresistors + servo motor.
 Realtime data visualized via Node-RED dashboard over MQTT.
 
 ![ESP32](https://img.shields.io/badge/Platform-ESP32-blue)
-![Node-Red](https://img.shields.io/badge/Dashboard-Node-Red-green)
+![Node-Red](https://img.shields.io/badge/Dashboard-Node--Red-red)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
 
 # 使用方式
