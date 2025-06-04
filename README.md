@@ -16,7 +16,7 @@ Realtime data visualized via Node-RED dashboard over MQTT.
 
 環境準備
 1. 開啟 Arduino IDE, 設定 WiFi & MQTT
-參考 ESP32 資料夾內的 .ino 檔案，設定WiFi & MQTT Broker並燒錄至 ESP32。
+參考 ESP32/ 資料夾內的 .ino 檔案，設定WiFi & MQTT Broker並燒錄至 ESP32。
 
 2. 接線參考
 請依據 Images/ 資料夾內的接線圖進行連接，特別注意以下幾點：
@@ -28,8 +28,8 @@ Realtime data visualized via Node-RED dashboard over MQTT.
 安裝 Node.js 完成後，打開終端機，輸入 npm install -g node-red 就可以完成 Node-RED 的安裝
 
 ![Wiring Diagram](Images/Node_Red_Setting/Node_Red_Component.png)
-更多細節請參考Images/Node-Red_Setting資料夾
 
+更多細節請參考Images/Node_Red_Setting資料夾
 
 注意事項
 
@@ -37,7 +37,7 @@ Realtime data visualized via Node-RED dashboard over MQTT.
 LCD 1602 模組 I2C預設接的腳位是 SDA=>GPIO21, SCL=>GPIO22
   
 2. LED 有限流電阻, 
-詳細接線請參見 images/ 接線圖
+詳細接線請參見 Images/ 接線圖
 
 3. Node-Red更動後要按右上角Deploy才會生效
 
