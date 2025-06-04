@@ -1,7 +1,5 @@
 # Helio_Tracker
 
-###圖片 影片 部分敘述 這幾天有空會補充QAQ
-
 是一個使用 ESP32 + 光敏電阻 + 伺服馬達的光追蹤系統。
 透過 MQTT以及Node-RED 儀表板實現即時資料視覺化。
 
@@ -128,7 +126,9 @@ LCD 1602 模組, ESP32 I2C預設接的腳位是 SDA=>GPIO21, SCL=>GPIO22
 
 點擊下方觀看實際操作影片，展示伺服馬達追隨光源方向轉定並同步在Node-Red是視覺化Dashboard：
 
-Dashboard
+[![Helio Tracker Demo](https://youtu.be/vIxxufvUy7o)]
+
+Node-Red Dashboard
 
 ![Wiring Diagram](Images/Node-Red_UI.png)
 
