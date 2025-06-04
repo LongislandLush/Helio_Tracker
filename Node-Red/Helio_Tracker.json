@@ -1,0 +1,229 @@
+[
+    {
+        "id": "4c0b79c18bbeeb11",
+        "type": "tab",
+        "label": "Helio_Tracker",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "be3fc9247abf5d34",
+        "type": "mqtt in",
+        "z": "4c0b79c18bbeeb11",
+        "name": "",
+        "topic": "helioTracker/data",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "7f5d3180c4f5edcf",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 380,
+        "y": 280,
+        "wires": [
+            [
+                "632b65a3781fb46d"
+            ]
+        ]
+    },
+    {
+        "id": "632b65a3781fb46d",
+        "type": "json",
+        "z": "4c0b79c18bbeeb11",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 590,
+        "y": 280,
+        "wires": [
+            [
+                "90a2a8f7a5725ef4",
+                "ee22dc17cd38deca",
+                "944de5dc2e997dbb"
+            ]
+        ]
+    },
+    {
+        "id": "90a2a8f7a5725ef4",
+        "type": "function",
+        "z": "4c0b79c18bbeeb11",
+        "name": "Difference",
+        "func": "msg.payload = msg.payload.difference;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 200,
+        "wires": [
+            [
+                "33c1bb6c3ce9e0cc"
+            ]
+        ]
+    },
+    {
+        "id": "ee22dc17cd38deca",
+        "type": "function",
+        "z": "4c0b79c18bbeeb11",
+        "name": "Angle",
+        "func": "msg.payload = msg.payload.position;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 280,
+        "wires": [
+            [
+                "c3585b35480c2464"
+            ]
+        ]
+    },
+    {
+        "id": "944de5dc2e997dbb",
+        "type": "function",
+        "z": "4c0b79c18bbeeb11",
+        "name": "Direction",
+        "func": "msg.payload = msg.payload.direction;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 360,
+        "wires": [
+            [
+                "f0251c91d4af06ea"
+            ]
+        ]
+    },
+    {
+        "id": "33c1bb6c3ce9e0cc",
+        "type": "ui_text",
+        "z": "4c0b79c18bbeeb11",
+        "group": "5d403f7b61c3b65a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "光敏電阻差值",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1060,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "c3585b35480c2464",
+        "type": "ui_gauge",
+        "z": "4c0b79c18bbeeb11",
+        "name": "",
+        "group": "5d403f7b61c3b65a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Angle",
+        "label": "Degree",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "180",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": true,
+        "className": "",
+        "x": 1030,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f0251c91d4af06ea",
+        "type": "ui_template",
+        "z": "4c0b79c18bbeeb11",
+        "group": "5d403f7b61c3b65a",
+        "name": "Servo Direction",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"font-size: 28px; color: orange; font-weight: bold;\">\n    🧭 目前方向：{{msg.payload}}\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1060,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f5d3180c4f5edcf",
+        "type": "mqtt-broker",
+        "name": "MQTT_GO",
+        "broker": "https://broker.mqttgo.io/",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5d403f7b61c3b65a",
+        "type": "ui_group",
+        "name": "Status",
+        "tab": "7aad2c2710547551",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7aad2c2710547551",
+        "type": "ui_tab",
+        "name": "Helio_Tracker",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
