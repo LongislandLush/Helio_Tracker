@@ -16,18 +16,27 @@ Realtime data visualized via Node-RED dashboard over MQTT.
 
 環境準備
 1. 開啟 Arduino IDE, 設定 WiFi & MQTT
-參考 ESP32/ 資料夾內的 .ino 檔案，設定WiFi & MQTT Broker並燒錄至 ESP32。
+參考 ESP32 資料夾內的 .ino 檔案，設定WiFi & MQTT Broker並燒錄至 ESP32。
 
 2. 接線參考
-請依據 images/ 資料夾內的接線圖進行連接，特別注意以下幾點：
+請依據 Images/ 資料夾內的接線圖進行連接，特別注意以下幾點：
 
 ![Wiring Diagram](Images/Helio_Tracker_接線圖.png)
 
-4. Node-Red 元件參數設定
+4. Node-Red 簡易安裝 & 專案參數設定((詳細的Node-Red 安裝和操作請自行Google)
+因為是以 Node.js 為基礎，所以要使用前必須要安裝 Node.js，直接前往 Node.js 官方網站下載安裝。(https://nodejs.org/zh-tw)
+安裝 Node.js 完成後，打開終端機，輸入 npm install -g node-red 就可以完成 Node-RED 的安裝
+
+![Wiring Diagram](Images/Node_Red_Setting/Node_Red_Component.png)
+更多細節請參考Images/Node-Red_Setting資料夾
+
 
 注意事項
 
-1. LED 有限流電阻, 
+1. 我有另外搭配ESP32 IO Shield Board, 所以如果沒有這塊擴展板
+LCD 1602 模組 I2C預設接的腳位是 SDA=>GPIO21, SCL=>GPIO22
+  
+2. LED 有限流電阻, 
 詳細接線請參見 images/ 接線圖
 
 3. Node-Red更動後要按右上角Deploy才會生效
@@ -65,27 +74,29 @@ Realtime data visualized via Node-RED dashboard over MQTT.
 **Hardware**: 
 
 1. ESP32-Wroom-32UE Board x1
+
+2. ESP32 IO Shield Board x1 (Optional)
  
-2. LCD 1602 Module x1
+3. LCD 1602 Module x1
  
-3. SG90 x1
+4. SG90 x1
  
-4. Photoresistor x2
+5. Photoresistor x2
  
-5. LED:
+6. LED:
     – Red ×1
     – Green ×1
     – White ×1
 
-6. Resistors:
+7. Resistors:
     – 220 Ω ×2
     – 330 Ω ×3
 
-7. Breadboard ×1
+8. Breadboard ×1
 
-8. Jumper Wires: Male-to-Male, Male-to-Female (Depending on connection)
+9. Jumper Wires: Male-to-Male, Male-to-Female (Depending on connection)
 
-9. Bracket: For fixing SG90(It depends) 
+10. Bracket: For fixing SG90(Made with 3D Printing. It depends) 
 
 **Software**:
 
@@ -120,6 +131,8 @@ Dashboard
 ![Wiring Diagram](Images/Node-Red_UI.png)
 
 實體接線圖
+
+![Wiring Diagram](Images/Helio_Tracker_Wiring.jpg)
 
 # 授權
 ***本專案以 MIT License 授權開源使用。***
