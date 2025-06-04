@@ -34,7 +34,7 @@ Realtime data visualized via Node-RED dashboard over MQTT.
 注意事項
 
 1. 我有另外搭配ESP32 IO Shield Board, 所以如果沒有這塊擴展板
-LCD 1602 模組 I2C預設接的腳位是 SDA=>GPIO21, SCL=>GPIO22
+LCD 1602 模組, ESP32 I2C預設接的腳位是 SDA=>GPIO21, SCL=>GPIO22
   
 2. LED 有限流電阻, 
 詳細接線請參見 Images/ 接線圖
