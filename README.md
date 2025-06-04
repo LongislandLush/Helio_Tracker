@@ -126,7 +126,7 @@ LCD 1602 模組, ESP32 I2C預設接的腳位是 SDA=>GPIO21, SCL=>GPIO22
 
 點擊下方觀看實際操作影片，展示伺服馬達追隨光源方向轉定並同步在Node-Red視覺化Dashboard：
 
-[![Helio Tracker Demo](https://img.youtube.com/vi/YxuufvUy7oI/0.jpg)](https://youtu.be/YxuufvUy7oI)
+[![Helio Tracker Demo](https://youtu.be/vIxxufvUy7o)
 
 Node-Red Dashboard
 
